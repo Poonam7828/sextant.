@@ -1,17 +1,29 @@
-// src/App.js
-import React from 'react';
-import PublicIP from './components/PublicIP';
-import Exhibit from './components/Exhibit'; // Assuming you already have this container component
+import React from "react";
+import "./App.css";
+import Banner from "./components/Banner";
+import Exhibit from "./components/Exhibit";
+import PublicIP from "./components/PublicIP";
+import Latency from "./components/Latency";
 
-const App = () => {
+function App() {
   return (
     <div className="App">
-      <Exhibit title="Public IPs">
-        <PublicIP ipVersion="v4" />
-        <PublicIP ipVersion="v6" />
+      <Banner />
+      
+      <Exhibit title="Public IPv4 Address">
+        <PublicIP version="v4" />
+      </Exhibit>
+
+      <Exhibit title="Public IPv6 Address">
+        <PublicIP version="v6" />
+      </Exhibit>
+
+      <Exhibit title="Network Latency">
+        <Latency />
       </Exhibit>
     </div>
   );
-};
+}
 
 export default App;
+
