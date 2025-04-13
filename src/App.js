@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Banner from './components/Banner';
+import Exhibit from './components/Exhibit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-900 min-h-screen text-white">
+      <Banner />
+      <main className="p-6">
+        <Exhibit heading="Network Info">
+          <p>This is where a metric like public IP will go.</p>
+        </Exhibit>
+      </main>
     </div>
   );
 }
