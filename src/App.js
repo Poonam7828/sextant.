@@ -1,19 +1,17 @@
+// src/App.js
 import React from 'react';
-import './App.css';
-import Banner from './components/Banner';
-import Exhibit from './components/Exhibit';
+import PublicIP from './components/PublicIP';
+import Exhibit from './components/Exhibit'; // Assuming you already have this container component
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
-      <Banner />
-      <main className="p-6">
-        <Exhibit heading="Network Info">
-          <p>This is where a metric like public IP will go.</p>
-        </Exhibit>
-      </main>
+    <div className="App">
+      <Exhibit title="Public IPs">
+        <PublicIP ipVersion="v4" />
+        <PublicIP ipVersion="v6" />
+      </Exhibit>
     </div>
   );
-}
+};
 
 export default App;

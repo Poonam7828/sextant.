@@ -1,13 +1,15 @@
 
+
 import React from 'react';
 
-const Exhibit = ({ heading, children }) => {
+const Exhibit = ({ title, children }) => {
   return (
-    <div className="bg-gray-800 text-white p-4 my-4 rounded-xl shadow">
-      <h2 className="text-lg font-semibold mb-2">{heading}</h2>
-      <div>{children}</div>
+    <div className="bg-gray-800 p-6 rounded-lg shadow-md my-4">
+      <h2 className="text-xl font-bold text-white">{title}</h2>
+      <div className="mt-4">{children}</div>
     </div>
   );
 };
 
 export default Exhibit;
+
